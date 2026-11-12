@@ -92,9 +92,10 @@ h2 span { color: var(--muted); }
 .skills-list li:hover { padding-left: 10px; }
 .skills-list span { width: 30px; color: var(--muted); font: .7rem "DM Sans"; padding-top: 5px; }
 .skill-dropdown { display: block !important; padding: 0 !important; }
-.skill-dropdown button { width: 100%; display: flex; gap: 28px; align-items: flex-start; padding: 18px 0; border: 0; color: inherit; background: none; text-align: left; cursor: pointer; font: inherit; }
+.skill-dropdown:hover { padding-left: 0 !important; }
+.skill-dropdown button { width: 100%; display: grid; grid-template-columns: 30px 1fr; gap: 28px; align-items: center; padding: 18px 0; border: 0; appearance: none; color: inherit; background: none; text-align: left; cursor: pointer; font: inherit; }
 .skill-dropdown button:hover { color: var(--muted); }
-.skill-dropdown button span { flex: 0 0 30px; }
+.skill-dropdown button span { width: 30px; }
 .skill-details { display: none; max-width: 620px; margin: -2px 0 20px 58px; color: var(--muted); font: 400 .95rem/1.6 "DM Sans"; }
 .skill-details.is-open { display: block; }
 .contact-section { padding: 110px 0 160px; border-top: 1px solid var(--line); }
