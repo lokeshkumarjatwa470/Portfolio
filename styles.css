@@ -51,6 +51,15 @@ h2 { margin-bottom: 38px; font: 600 clamp(2.7rem, 6vw, 5.2rem)/.98 "Space Grotes
 h2 span { color: var(--muted); }
 .large-copy { max-width: 560px; margin-bottom: 40px; font-size: 1.3rem; line-height: 1.5; }
 .text-link { display: inline-block; border-bottom: 1px solid var(--ink); padding-bottom: 8px; font-weight: 600; }
+.education-section { display: grid; grid-template-columns: 28% 1fr; gap: 8%; padding: 110px 0; border-top: 1px solid var(--line); }
+.education-item { padding: 28px 0; border-bottom: 1px solid var(--line); }
+.education-item:first-child { padding-top: 0; }
+.education-item:last-child { border-bottom: 0; }
+.education-period { margin-bottom: 18px; color: var(--muted); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+.education-item h2 { margin-bottom: 18px; font-size: clamp(2.2rem, 4vw, 3.8rem); }
+.education-item h3 { margin-bottom: 12px; font: 600 1.8rem "Space Grotesk"; }
+.education-item p:not(.education-period) { max-width: 560px; margin-bottom: 12px; color: var(--muted); line-height: 1.5; }
+.education-item strong { font-size: .9rem; }
 .work-section { padding: 40px 0 155px; }
 .section-heading { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 34px; }
 .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
@@ -100,11 +109,34 @@ h2 span { color: var(--muted); }
 .skill-details.is-open { display: block; }
 .contact-section { padding: 110px 0 160px; border-top: 1px solid var(--line); }
 .contact-section h2 { margin: 70px 0 65px; }
-.contact-email { display: inline-block; font: 500 clamp(1.4rem, 3vw, 2.3rem) "Space Grotesk"; border-bottom: 1px solid var(--ink); padding-bottom: 12px; transition: color .2s ease, border-color .2s ease; }
+.contact-email { display: inline-flex; align-items: center; max-width: 100%; font: 500 clamp(1.4rem, 3vw, 2.3rem) "Space Grotesk"; border-bottom: 1px solid var(--ink); padding-bottom: 12px; transition: color .2s ease, border-color .2s ease; }
 .contact-email:hover { color: #7770e8; border-color: #7770e8; }
-.site-footer { display: flex; justify-content: space-between; padding: 22px 0 34px; border-top: 1px solid var(--line); color: var(--muted); font-size: .75rem; }
+.site-footer { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 22px 0 34px; border-top: 1px solid var(--line); color: var(--muted); font-size: .75rem; }
 .site-footer p { margin: 0; }
-.social-links { display: flex; gap: 24px; }
+.social-links { display: flex; align-items: center; gap: 24px; }
+.social-links a { white-space: nowrap; }
+.social-links a span { margin-left: 4px; }
+.case-study-header { padding: 28px 0; border-bottom: 1px solid var(--line); }
+.case-study-header .brand { display: inline-block; }
+.case-study-main { padding: 105px 0 140px; }
+.case-study-kicker { color: var(--muted); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+.case-study-title { max-width: 930px; margin: 38px 0 28px; font: 600 clamp(3.8rem, 9vw, 8rem)/.9 "Space Grotesk", sans-serif; letter-spacing: -.09em; }
+.case-study-intro { max-width: 650px; color: var(--muted); font-size: 1.25rem; line-height: 1.55; }
+.case-study-hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; margin: 85px 0 115px; }
+.case-study-visual { min-height: 390px; display: grid; place-items: center; overflow: hidden; background: var(--blue); }
+.case-study-visual .visual-dormdeal { width: 100%; height: 100%; font-size: clamp(3rem, 7vw, 6rem); }
+.case-study-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.case-study-meta div { padding: 26px; background: var(--ink); color: var(--paper); }
+.case-study-meta dt { margin-bottom: 18px; color: #aaa7a0; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; }
+.case-study-meta dd { margin: 0; font: 500 1.15rem/1.35 "Space Grotesk"; }
+.case-study-section { display: grid; grid-template-columns: 28% 1fr; gap: 8%; padding: 85px 0; border-top: 1px solid var(--line); }
+.case-study-section h2 { margin: 0; font-size: clamp(2.2rem, 4vw, 3.8rem); }
+.case-study-section p { max-width: 680px; color: var(--muted); font-size: 1.15rem; line-height: 1.65; }
+.case-study-section p:last-child { margin-bottom: 0; }
+.case-study-list { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 0; padding: 0; list-style: none; }
+.case-study-list li { padding: 22px; border: 1px solid var(--line); font: 500 1.1rem/1.35 "Space Grotesk"; }
+.case-study-list span { display: block; margin-bottom: 28px; color: var(--muted); font: .7rem "DM Sans"; }
+.case-study-back { display: inline-block; margin-top: 30px; border-bottom: 1px solid var(--ink); padding-bottom: 8px; font-weight: 600; }
 @keyframes rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
@@ -120,6 +152,7 @@ h2 span { color: var(--muted); }
   .hero-footer { align-items: flex-start; }
   .circle-link { flex: 0 0 auto; margin-left: 20px; }
   .split-section { grid-template-columns: 1fr; gap: 50px; padding: 90px 0; }
+  .education-section { grid-template-columns: 1fr; gap: 50px; padding: 90px 0; }
   .section-heading { display: block; }
   .section-heading .muted { margin-top: 25px; }
   .projects { grid-template-columns: 1fr; }
@@ -128,5 +161,12 @@ h2 span { color: var(--muted); }
   .contact-section { padding: 90px 0; }
   .contact-section h2 { margin: 55px 0; }
   .site-footer { display: block; }
-  .social-links { margin-top: 20px; flex-wrap: wrap; }
+  .social-links { margin-top: 20px; gap: 14px 20px; flex-wrap: wrap; }
+  .case-study-main { padding: 75px 0 90px; }
+  .case-study-title { font-size: clamp(3.4rem, 16vw, 5.5rem); }
+  .case-study-hero, .case-study-section { grid-template-columns: 1fr; gap: 38px; }
+  .case-study-hero { margin: 60px 0 80px; }
+  .case-study-visual { min-height: 300px; }
+  .case-study-meta { grid-template-columns: 1fr 1fr; }
+  .case-study-section { padding: 65px 0; }
 }
