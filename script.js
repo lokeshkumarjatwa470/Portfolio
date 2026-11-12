@@ -15,4 +15,15 @@ siteNav?.querySelectorAll("a").forEach((link) => {
   });
 });
 
+document.querySelectorAll(".skill-dropdown button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const detailsId = button.getAttribute("aria-controls");
+    const details = detailsId ? document.getElementById(detailsId) : null;
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute("aria-expanded", String(!isOpen));
+    details?.classList.toggle("is-open", !isOpen);
+  });
+});
+
 document.querySelector("#year").textContent = new Date().getFullYear();

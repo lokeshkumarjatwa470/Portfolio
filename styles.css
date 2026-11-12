@@ -87,13 +87,16 @@ h2 span { color: var(--muted); }
 .project-meta a:hover { transform: translate(3px, -3px); }
 .project-detail { margin: 14px 0 0; font-size: .78rem; line-height: 1.4; }
 .skills-section { padding-top: 100px; }
-.skill-summary { max-width: 620px; margin: -8px 0 24px; color: var(--muted); line-height: 1.6; }
-.skill-summary:last-of-type { margin-bottom: 38px; }
-.skill-summary strong { color: var(--ink); }
 .skills-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .skills-list li { display: flex; gap: 28px; padding: 18px 0; border-bottom: 1px solid var(--line); font: 500 1.4rem "Space Grotesk"; transition: padding-left .25s var(--ease); }
 .skills-list li:hover { padding-left: 10px; }
 .skills-list span { width: 30px; color: var(--muted); font: .7rem "DM Sans"; padding-top: 5px; }
+.skill-dropdown { display: block !important; padding: 0 !important; }
+.skill-dropdown button { width: 100%; display: flex; gap: 28px; align-items: flex-start; padding: 18px 0; border: 0; color: inherit; background: none; text-align: left; cursor: pointer; font: inherit; }
+.skill-dropdown button:hover { color: var(--muted); }
+.skill-dropdown button span { flex: 0 0 30px; }
+.skill-details { display: none; max-width: 620px; margin: -2px 0 20px 58px; color: var(--muted); font: 400 .95rem/1.6 "DM Sans"; }
+.skill-details.is-open { display: block; }
 .contact-section { padding: 110px 0 160px; border-top: 1px solid var(--line); }
 .contact-section h2 { margin: 70px 0 65px; }
 .contact-email { display: inline-block; font: 500 clamp(1.4rem, 3vw, 2.3rem) "Space Grotesk"; border-bottom: 1px solid var(--ink); padding-bottom: 12px; transition: color .2s ease, border-color .2s ease; }
